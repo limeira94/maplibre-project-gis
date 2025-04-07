@@ -1,54 +1,87 @@
-# React + TypeScript + Vite
+# MapLibre WebGIS Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern WebGIS application built with MapLibre GL JS, React, TypeScript, and Tailwind CSS. This project provides an interactive web mapping platform with OpenStreetMap integration.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive map display using MapLibre GL JS
+- OpenStreetMap base layer
+- Navigation controls for pan/zoom functionality
+- Scale control for distance reference
+- Responsive design that works on all screen sizes
+- Clean, well-structured codebase with TypeScript type safety
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: UI components and state management
+- **Vite**: Fast builds and development server
+- **TypeScript**: Type-safe code
+- **MapLibre GL JS**: Interactive mapping library
+- **Tailwind CSS**: Utility-first styling
+- **ESLint/Prettier**: Code formatting and linting
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 16.x or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/maplibre-project-gis.git
+   cd maplibre-project-gis
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+### Development
+
+Run the development server:
+```
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The application will be available at http://localhost:5173
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Build for Production
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Create a production build:
 ```
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── assets/          # Static assets like images and icons
+├── components/      # React components
+│   └── map/         # Map-related components
+├── hooks/           # Custom React hooks
+├── services/        # API and data fetching services
+├── styles/          # CSS and style-related files
+├── types/           # TypeScript type definitions
+└── utils/           # Utility functions
+```
+
+## Environment Variables
+
+The following environment variables can be configured in a `.env` file:
+
+- `VITE_MAPLIBRE_KEY` - API key for MapLibre services (if required)
+- `VITE_MAP_STYLE_URL` - URL to the map style definition
+- `VITE_DEFAULT_LONGITUDE` - Default map center longitude
+- `VITE_DEFAULT_LATITUDE` - Default map center latitude
+- `VITE_DEFAULT_ZOOM` - Default map zoom level
+- `VITE_TILE_SERVER_URL` - URL to the tile server
+- `VITE_DATA_API_URL` - URL to the GIS data API
+
+## License
+
+MIT
