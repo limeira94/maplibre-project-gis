@@ -31,7 +31,7 @@ A modern WebGIS application built with MapLibre GL JS, React, TypeScript, and Ta
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/maplibre-project-gis.git
+   git clone https://github.com/limeira94/maplibre-project-gis.git
    cd maplibre-project-gis
    ```
 
