@@ -1,0 +1,74 @@
+# PROJECT OVERVIEW
+- This project is a web application that allows users to view and interact with a map.
+
+# TECH STACK
+- React for UI components and state management
+- Vite for fast builds and development server
+- TypeScript for type-safe code
+- MapLibre GL JS for interactive mapping
+- Tailwind CSS for styling
+- Node.js/npm for dependency management
+- ESLint/Prettier for code formatting and linting
+
+# Fundamental Principles
+- Write clean, type-safe code with proper TypeScript types
+- Create reusable, modular map components
+- Keep files small and focused (<200 lines)
+- Separate map functionality from UI logic
+- Use React hooks for state management when appropriate
+- Follow MapLibre GL JS best practices for performance
+- Use clear, descriptive naming for map layers and features
+- Implement responsive designs for all screen sizes
+- Test map interactions after every change
+
+# Error Fixing Process
+- For mapping issues, check the MapLibre console for specific errors first
+- For TypeScript errors, carefully review the type definitions
+- When fixing styling issues, inspect the element in browser dev tools
+- Isolate map rendering issues from data source problems
+- For performance issues, check render cycles and network requests
+- Make minimal necessary changes to fix bugs
+- Document complex fixes with detailed comments
+- For dependency conflicts, check package versions compatibility
+- When encountering unknown MapLibre errors, check their GitHub issues
+
+# Building Process
+- Use Vite's fast refresh for efficient development
+- Start with basic map setup before adding complex features
+- Add map layers incrementally and test each one
+- Implement core map functionality before advanced interactions
+- Use feature flags for experimental map features
+- Ensure map loads efficiently with proper asset optimization
+- Test all map interactions across different browsers and devices
+- Optimize map tiles and sources for performance
+- Implement proper error boundaries around map components
+- Document the purpose of each map layer and interaction
+
+# Environment Variables
+- VITE_MAPLIBRE_KEY - API key for MapLibre services (if required)
+- VITE_MAP_STYLE_URL - URL to the map style definition
+- VITE_DEFAULT_LONGITUDE - Default map center longitude
+- VITE_DEFAULT_LATITUDE - Default map center latitude
+- VITE_DEFAULT_ZOOM - Default map zoom level
+- VITE_TILE_SERVER_URL - URL to the tile server
+- VITE_DATA_API_URL - URL to the GIS data API
+- NODE_ENV - Development/production environment
+
+# Code Organization
+- /src/components/map - All map-related React components
+- /src/hooks - Custom React hooks for map functionality
+- /src/services - API and data fetching services
+- /src/types - TypeScript type definitions
+- /src/utils - Utility functions for map data processing
+- /src/styles - Custom Tailwind CSS extensions
+- /src/assets - Static assets like markers and icons
+
+# Comments
+- Document all map configuration parameters
+- Explain complex spatial calculations or algorithms
+- Include references to MapLibre documentation for non-obvious features
+- Add comments explaining coordinate systems and projections used
+- Document data sources and their attributes
+- Explain performance optimization techniques
+- Never delete comments unless they're clearly outdated
+- Use JSDoc for function documentation
