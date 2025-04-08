@@ -1,0 +1,136 @@
+/* BasemapSelector.css - Explicit styles for basemap component */
+
+/* Fix for possible CSS conflicts */
+.basemap-component *,
+.basemap-button *,
+.basemap-modal * {
+    box-sizing: border-box;
+}
+
+.basemap-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    transition: background-color 0.2s;
+}
+
+.basemap-button:hover {
+    background-color: #f3f4f6;
+}
+
+.basemap-modal {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    width: 220px;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    overflow: hidden;
+}
+
+.basemap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.basemap-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.dots-button {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px;
+    margin: -4px;
+}
+
+.dots-button:hover {
+    color: #1f2937;
+}
+
+.basemap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.basemap-item {
+    margin: 0;
+    padding: 0;
+}
+
+.basemap-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.basemap-option:hover {
+    background-color: #f9fafb;
+}
+
+.basemap-option.selected {
+    background-color: #e6f2ff;
+}
+
+.thumbnail-container {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+}
+
+.thumbnail-container.selected {
+    border-color: #3b82f6;
+    border-width: 2px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.basemap-name {
+    font-size: 14px;
+    color: #4b5563;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}

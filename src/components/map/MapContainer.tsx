@@ -1,11 +1,11 @@
 import { useRef, useEffect, useMemo } from 'react';
-import maplibregl from 'maplibre-gl';
+import maplibregl, { StyleSpecification } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { MapProps } from '../../types/map';
 import { useMapContext } from '../../hooks/useMapContext';
 
 // Default OSM style definition outside component to avoid recreation
-const DEFAULT_OSM_STYLE = {
+const DEFAULT_OSM_STYLE: StyleSpecification = {
     version: 8,
     sources: {
         'osm': {
@@ -52,7 +52,7 @@ const MapContainer = ({
 
         const map = new maplibregl.Map({
             container: mapContainerRef.current,
-            style: mapStyle,
+            style: mapStyle as StyleSpecification,
             center: [memoizedInitialViewState.longitude, memoizedInitialViewState.latitude],
             zoom: memoizedInitialViewState.zoom
         });
